@@ -23,7 +23,7 @@ void main()
 		func(i2c_slave_read(0xd0,0x00));//0x00 address is for seconds
 		lcd_cmd(0xc0);// cursor is set to second line of lcd
 		lcd_str("Temperature: ");
-		float_val(spi_adc_read(0,0));
+		float_val(spi_adc_read(0,0));// here potentiometer is used as an alt to lm35 sensor
 		delay(1000);
     lcd_cmd(0x80);// cursor is set back to first line of lcd
 	}
